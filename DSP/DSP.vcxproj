@@ -162,16 +162,16 @@ xcopy /y /d "$(FMOD_LOW)\lib\release\*.dll" "$(OutDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\AudioObject.cpp" />
+    <ClCompile Include="src\base\AudioObject.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\AudioObject.h" />
-    <ClInclude Include="src\IAudioContext.h" />
-    <ClInclude Include="src\IAudioData.h" />
-    <ClInclude Include="src\IAudioDevice.h" />
+    <ClInclude Include="src\base\AudioObject.h" />
+    <ClInclude Include="src\base\IAudioContext.h" />
+    <ClInclude Include="src\base\IAudioData.h" />
+    <ClInclude Include="src\base\IAudioDevice.h" />
     <ClInclude Include="src\maths\Clamp.h" />
-    <ClInclude Include="src\SampleInfo.h" />
+    <ClInclude Include="src\base\SampleInfo.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
