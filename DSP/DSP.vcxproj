@@ -91,15 +91,17 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(FMOD_STUDIO)\inc;$(FMOD_LOW)\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(FMOD_STUDIO)\inc\;$(FMOD_LOW)\inc\;$(SDL2)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(FMOD_STUDIO)\lib\debug;$(FMOD_LOW)\lib\debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>fmodstudioL_vc.lib;fmodL_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FMOD_STUDIO)\lib\debug;$(FMOD_LOW)\lib\debug;$(SDL2_LIB86);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;fmodstudioL_vc.lib;fmodL_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
     </Link>
     <PostBuildEvent>
       <Command>xcopy /y /d "$(FMOD_STUDIO)\lib\debug\*.dll" "$(OutDir)"
-xcopy /y /d "$(FMOD_LOW)\lib\debug\*.dll" "$(OutDir)"</Command>
+xcopy /y /d "$(FMOD_LOW)\lib\debug\*.dll" "$(OutDir)"
+xcopy /y /d "$(SDL2_LIB86)\*.dll" "$(OutDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -108,15 +110,16 @@ xcopy /y /d "$(FMOD_LOW)\lib\debug\*.dll" "$(OutDir)"</Command>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(FMOD_STUDIO)\inc;$(FMOD_LOW)\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(FMOD_STUDIO)\inc\;$(FMOD_LOW)\inc\;$(SDL2)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(FMOD_STUDIO)\lib\debug;$(FMOD_LOW)\lib\debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>fmodstudioL_vc.lib;fmodL_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FMOD_STUDIO)\lib\debug;$(FMOD_LOW)\lib\debug;$(SDL2_LIB64);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;fmodstudioL_vc.lib;fmodL_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>xcopy /y /d "$(FMOD_STUDIO)\lib\debug\*.dll" "$(OutDir)"
-xcopy /y /d "$(FMOD_LOW)\lib\debug\*.dll" "$(OutDir)"</Command>
+xcopy /y /d "$(FMOD_LOW)\lib\debug\*.dll" "$(OutDir)"
+xcopy /y /d "$(SDL2_LIB64)\*.dll" "$(OutDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -127,17 +130,18 @@ xcopy /y /d "$(FMOD_LOW)\lib\debug\*.dll" "$(OutDir)"</Command>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(FMOD_STUDIO)\inc;$(FMOD_LOW)\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(FMOD_STUDIO)\inc\;$(FMOD_LOW)\inc\;$(SDL2)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>$(FMOD_STUDIO)\lib\release;$(FMOD_LOW)\lib\release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>fmodstudio_vc.lib;fmod_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FMOD_STUDIO)\lib\release;$(FMOD_LOW)\lib\release;$(SDL2_LIB86);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;fmodstudio_vc.lib;fmod_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /y /d "$(FMOD_STUDIO)\lib\release\*.dll" "$(OutDir)"
-xcopy /y /d "$(FMOD_LOW)\lib\release\*.dll" "$(OutDir)"</Command>
+      <Command>/y /d "$(FMOD_STUDIO)\lib\release\*.dll" "$(OutDir)"
+xcopy /y /d "$(FMOD_LOW)\lib\release\*.dll" "$(OutDir)"
+xcopy /y /d "$(SDL2_LIB86)\*.dll" "$(OutDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -148,17 +152,18 @@ xcopy /y /d "$(FMOD_LOW)\lib\release\*.dll" "$(OutDir)"</Command>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(FMOD_STUDIO)\inc;$(FMOD_LOW)\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(FMOD_STUDIO)\inc\;$(FMOD_LOW)\inc\;$(SDL2)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>$(FMOD_STUDIO)\lib\release;$(FMOD_LOW)\lib\release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>fmodstudio_vc.lib;fmod_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FMOD_STUDIO)\lib\release;$(FMOD_LOW)\lib\release;$(SDL2_LIB64);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;fmodstudio_vc.lib;fmod_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /y /d "$(FMOD_STUDIO)\lib\release\*.dll" "$(OutDir)"
-xcopy /y /d "$(FMOD_LOW)\lib\release\*.dll" "$(OutDir)"</Command>
+      <Command>/y /d "$(FMOD_STUDIO)\lib\release\*.dll" "$(OutDir)"
+xcopy /y /d "$(FMOD_LOW)\lib\release\*.dll" "$(OutDir)"
+xcopy /y /d "$(SDL2_LIB64)\*.dll" "$(OutDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
