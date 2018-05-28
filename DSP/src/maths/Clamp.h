@@ -27,7 +27,7 @@ namespace maths
                 - max: the biggest possible number that value can reach
                 - value: the value that needs constraints
         */
-        float Clamp(float value, float min, float max)
+        inline float Clamp(float value, float min, float max)
         {
             if (value < min)
                 return min;
@@ -43,7 +43,7 @@ namespace maths
                 - max: the biggest possible number that value can reach
                 - value: the value that needs constraints
         */
-        int Clamp(int value, int min, int max)
+        inline int Clamp(int value, int min, int max)
         {
             if (value < min)
                 return min;
