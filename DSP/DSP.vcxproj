@@ -167,11 +167,15 @@ xcopy /y /d "$(SDL2_LIB64)\*.dll" "$(OutDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\sdl\SDLAudioDevice.cpp" />
+    <ClCompile Include="src\sdl\SDLWavAudioData.cpp" />
     <ClCompile Include="src\base\AudioObject.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\sdl\SDLAudioContext.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\sdl\SDLAudioDevice.h" />
+    <ClInclude Include="src\sdl\SDLWavAudioData.h" />
     <ClInclude Include="src\base\AudioObject.h" />
     <ClInclude Include="src\base\IAudioContext.h" />
     <ClInclude Include="src\base\IAudioData.h" />
