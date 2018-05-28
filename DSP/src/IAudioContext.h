@@ -1,5 +1,6 @@
 #pragma once
 
+#include "AudioObject.h"
 /*
     This interface
 */
