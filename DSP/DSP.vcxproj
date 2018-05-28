@@ -169,6 +169,7 @@ xcopy /y /d "$(SDL2_LIB64)\*.dll" "$(OutDir)"</Command>
   <ItemGroup>
     <ClCompile Include="src\base\AudioObject.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\sdl\SDLAudioContext.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\base\AudioObject.h" />
@@ -177,6 +178,7 @@ xcopy /y /d "$(SDL2_LIB64)\*.dll" "$(OutDir)"</Command>
     <ClInclude Include="src\base\IAudioDevice.h" />
     <ClInclude Include="src\maths\Clamp.h" />
     <ClInclude Include="src\base\SampleInfo.h" />
+    <ClInclude Include="src\sdl\SDLAudioContext.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
