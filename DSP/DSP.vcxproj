@@ -167,6 +167,7 @@ xcopy /y /d "$(FMOD_LOW)\lib\release\*.dll" "$(OutDir)"</Command>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\AudioObject.h" />
+    <ClInclude Include="src\easy_input.h" />
     <ClInclude Include="src\IAudioContext.h" />
     <ClInclude Include="src\IAudioData.h" />
     <ClInclude Include="src\IAudioDevice.h" />

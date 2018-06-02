@@ -1,7 +1,9 @@
-#include <stdio.h>
+#include "easy_input.h"
+
+#define ESC 27
 
 int main()
 {
-    printf("Lets start with DSP");
+    while (int input = getChar() != ESC);
     return 0;
 }
