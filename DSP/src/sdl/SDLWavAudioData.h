@@ -10,7 +10,7 @@ class SDLWavAudioData : public IAudioData
 private:
     Uint8 *m_pos;
     Uint8 *m_start;
-    Uint32 m_length;
+    Uint8 *m_end;
 
 public:
     SDLWavAudioData(const std::string &fileName, bool streamFromFile);

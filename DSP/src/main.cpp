@@ -13,11 +13,12 @@ int main(int argc, char** agrs)
     IAudioDevice*  device  = new SDLAudioDevice();
     IAudioContext* context = new SDLAudioContext();
 
-    
-    IAudioData* data = device->CreateAudioFromFile(FILE_PATH);
+    std::string path("res/gong-16-bit.wav");
+    IAudioData* data = device->CreateAudioFromFile(path);
     
     SampleInfo info;
     info.volume = 1.0;
+    info.pitch = 2.0;
 
     AudioObject sound(info, data);
 
