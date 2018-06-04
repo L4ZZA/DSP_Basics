@@ -61,10 +61,12 @@
     <Link>
       <AdditionalLibraryDirectories>$(FMOD_STUDIO)\lib\debug;$(FMOD_LOW)\lib\debug;$(SFML)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>fmodstudioL_vc.lib;fmodL_vc.lib;sfml-audio-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
     </Link>
     <PostBuildEvent>
       <Command>xcopy /y /d "$(FMOD_STUDIO)\lib\debug\*.dll" "$(OutDir)"
 xcopy /y /d "$(FMOD_LOW)\lib\debug\*.dll" "$(OutDir)"
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -82,10 +84,12 @@ xcopy /y /d "$(FMOD_LOW)\lib\debug\*.dll" "$(OutDir)"
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>$(FMOD_STUDIO)\lib\release;$(FMOD_LOW)\lib\release;$(SFML)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>fmodstudio_vc.lib;fmod_vc.lib;sfml-audio.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
     </Link>
     <PostBuildEvent>
       <Command>xcopy /y /d "$(FMOD_STUDIO)\lib\release\*.dll" "$(OutDir)"
 xcopy /y /d "$(FMOD_LOW)\lib\release\*.dll" "$(OutDir)"
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
