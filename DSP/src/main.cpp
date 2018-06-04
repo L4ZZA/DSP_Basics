@@ -1,4 +1,4 @@
-#include "easy_input.h"
+#include "base/easy_input.h"
 
 #define ESC 27
 
