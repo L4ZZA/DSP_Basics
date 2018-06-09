@@ -93,10 +93,12 @@ xcopy /y /d "$(SFML)\bin\*.dll" "$(OutDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\SFML\SFMLAudioContext.cpp" />
     <ClCompile Include="src\base\AudioObject.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\SFML\SFMLAudioContext.h" />
     <ClInclude Include="src\base\AudioObject.h" />
     <ClInclude Include="src\base\IAudioContext.h" />
     <ClInclude Include="src\base\IAudioData.h" />

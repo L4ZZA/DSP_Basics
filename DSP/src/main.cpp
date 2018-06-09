@@ -13,13 +13,24 @@ int main(void)
     sf::Sound sound;
     sound.setBuffer(buffer);
 
+    bool isPlaying = false;
+
     char input(0);
     while (input != ESC)
     {
         input = getChar();
-        if (input == 'p')
+        switch (input)
         {
-            sound.play();
+        case 'p':
+            if (!isPlaying)
+                sound.play();
+            else
+                sound.pause();
+
+            isPlaying = !isPlaying;
+            break;
+        default:
+            break;
         }
     }
 
