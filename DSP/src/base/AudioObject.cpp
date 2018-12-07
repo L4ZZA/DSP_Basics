@@ -13,7 +13,7 @@ bool AudioObject::GenerateSamples(float * stream, size_t streamLength)
 {
     m_audioPos = m_audioData->GenerateSamples(stream, streamLength, m_audioPos, m_sampleInfo);
 
-    if (m_audioPos == (size_t)-1)
+    if (m_audioPos == static_cast<size_t>(-1))
     {
         m_audioPos = 0;
         return false;
@@ -30,5 +30,5 @@ void AudioObject::SetPos(double pos)
 
 size_t AudioObject::PosToAbsolutePos(double pos)
 {
-    return (size_t)(pos * m_audioLength);
+    return static_cast<size_t>(pos * m_audioLength);
 }
