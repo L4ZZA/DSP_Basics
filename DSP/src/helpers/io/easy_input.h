@@ -16,7 +16,7 @@ inline char getChar(bool show = false)
 {
     char ch = _getch();
 
-    // overridig arrow keys prefix if found
+    // overriding arrow keys prefix if found
     if (ch == ARROW_PREFIX)
     {
         ch = _getch();

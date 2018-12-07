@@ -170,8 +170,8 @@ xcopy /y /d "$(FMOD_LOW)\lib\release\*.dll" "$(OutDir)"</Command>
     <ClInclude Include="src\base\IAudioContext.h" />
     <ClInclude Include="src\base\IAudioData.h" />
     <ClInclude Include="src\base\IAudioDevice.h" />
-    <ClInclude Include="src\base\easy_input.h" />
-    <ClInclude Include="src\maths\Clamp.h" />
+    <ClInclude Include="src\helpers\io\easy_input.h" />
+    <ClInclude Include="src\helpers\maths\Clamp.h" />
     <ClInclude Include="src\base\SampleInfo.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

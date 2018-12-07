@@ -1,5 +1,5 @@
 #include "AudioObject.h"
-#include "../maths/Clamp.h"
+#include "helpers/maths/Clamp.h"
 
 AudioObject::AudioObject(const SampleInfo & info, IAudioData * data)
     : m_audioPos(0),
