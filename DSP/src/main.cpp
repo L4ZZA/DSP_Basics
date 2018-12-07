@@ -4,6 +4,6 @@
 
 int main()
 {
-    while (int input = getChar() != ESC);
+    while (int input = getChar(true) != ESC);
     return 0;
 }
